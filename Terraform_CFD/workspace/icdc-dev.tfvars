@@ -1,10 +1,10 @@
-stack_name = "icdc"
+stack_name = "icdc-cache"
 
 tags = {
-  Project = "icdc"
+  Project = "icdc-cache"
   CreatedWith = "Terraform"
   POC = "ye.wu@nih.gov"
-  Environment = "dev"
+  Environment = "dev-2"
 }
 region = "us-east-1"
 
