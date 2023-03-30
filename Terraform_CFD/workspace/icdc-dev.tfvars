@@ -1,5 +1,3 @@
-
-vpc_id = "vpc-29a12251"
 stack_name = "icdc"
 
 tags = {
