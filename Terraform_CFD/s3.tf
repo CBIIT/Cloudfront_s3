@@ -1,6 +1,6 @@
 module "s3" {
   source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/s3"
-  bucket_name = var.cloudfront_distribution_bucket_name
+  bucket_name = var.bucket_name
   stack_name = var.stack_name
   env = terraform.workspace
   tags = var.tags
