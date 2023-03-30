@@ -7,7 +7,7 @@ module "s3" {
   s3_force_destroy = var.s3_force_destroy
   days_for_archive_tiering = 125
   days_for_deep_archive_tiering = 180
-  s3_enable_access_logging = false
+  s3_enable_access_logging = true
   s3_access_log_bucket_id = ""
 }
 
