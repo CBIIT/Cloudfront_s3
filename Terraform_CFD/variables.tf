@@ -35,18 +35,12 @@ variable "create_cloudfront" {
 variable "create_files_bucket" {
   description = "indicate if you want to create files bucket or use existing one"
   type = bool
-  default = false
+  default = true
 }
 
 variable "domain_name" {
   description = "domain name for the application"
   type = string
-}
-
-variable "s3_force_destroy" {
-  description = "force destroy bucket"
-  default = true
-  type = bool
 }
 
 variable "region" {
