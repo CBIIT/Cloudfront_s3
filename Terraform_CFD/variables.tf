@@ -70,5 +70,5 @@ variable "s3_force_destroy" {
 variable "bucket_name" {
   description = "s3 bucket name"
   type = string
-  default = "null"
+  default = null
 }
