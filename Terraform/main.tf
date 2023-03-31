@@ -7,6 +7,27 @@ resource "aws_s3_bucket" "sbg_cgc_bucket" {
   acl    = "private"
 }
 
+resource "aws_s3_bucket_policy" "sbg_cgc_bucket" {
+  bucket = aws_s3_bucket.sbg_cgc_bucket.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action   = "s3:*"
+        Effect   = "Allow"
+        Resource = [
+          "${aws_s3_bucket.sbg_cgc_bucket.arn}",
+          "${aws_s3_bucket.sbg_cgc_bucket.arn}/*",
+        ]
+        Principal = {
+          AWS = "arn:aws:iam::ACCOUNT_ID:role/sbg-cgc-role"
+        }
+      }
+    ]
+  })
+}
+
 resource "aws_cloudfront_origin_access_identity" "sbg_cgc_identity" {
   comment = "S3 Origin Identity for SBG-CGC"
 }
