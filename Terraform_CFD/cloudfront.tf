@@ -1,6 +1,6 @@
 module "cloudfront" {
   count = var.create_cloudfront ? 1 : 0
-  source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/cloudfront"
+  source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/cloudfront?ref=cloudfront_module_update"
   alarms = var.alarms
   domain_name = var.domain_name
   cloudfront_distribution_bucket_name = module.s3.bucket_name
