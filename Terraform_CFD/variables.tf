@@ -35,7 +35,7 @@ variable "create_cloudfront" {
 variable "create_files_bucket" {
   description = "indicate if you want to create files bucket or use existing one"
   type = bool
-  default = true
+  default = false
 }
 
 variable "domain_name" {
