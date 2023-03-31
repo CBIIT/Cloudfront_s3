@@ -21,7 +21,7 @@ target_account_cloudone = true
 #cloudfront
 create_cloudfront = true
 create_files_bucket = false
-cloudfront_distribution_bucket_name = "dev-sbg-tmp"
+cloudfront_distribution_bucket_name = "icdc-test-dev-tmp-files"
 cloudfront_slack_channel_name = "cloudone-cloudfront-wafv2"
 alarms = {
   error4xx = {
