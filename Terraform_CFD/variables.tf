@@ -9,6 +9,12 @@ variable "alarms" {
   default = null
 }
 
+variable "resource_prefix" {
+  description = "alarms to be configured"
+  type = string
+  default = "icdc-prod"
+}
+
 variable "cloudfront_distribution_bucket_name" {
   description = "specify the name of s3 bucket for cloudfront"
   type = string
