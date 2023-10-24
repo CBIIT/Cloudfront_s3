@@ -9,13 +9,7 @@ variable "alarms" {
   default = null
 }
 
-variable "resource_prefix" {
-  description = "alarms to be configured"
-  type = string
-  default = "icdc-prod"
-}
-
-variable "cloudfront_distribution_bucket_name" {
+variable "bucket_name" {
   description = "specify the name of s3 bucket for cloudfront"
   type = string
   default = null
@@ -71,4 +65,10 @@ variable "s3_force_destroy" {
   description = "force destroy bucket"
   default = true
   type = bool
+}
+
+variable "project" {
+  type = string
+  description = "name of project"
+  default = icdc
 }
