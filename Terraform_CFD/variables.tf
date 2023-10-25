@@ -70,5 +70,5 @@ variable "s3_force_destroy" {
 variable "project" {
   type = string
   description = "name of project"
-  default = icdc
+  default = null
 }
