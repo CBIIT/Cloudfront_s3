@@ -12,7 +12,6 @@ variable "alarms" {
 variable "bucket_name" {
   description = "specify the name of s3 bucket for cloudfront"
   type = string
-  default = null
 }
 
 variable "stack_name" {
