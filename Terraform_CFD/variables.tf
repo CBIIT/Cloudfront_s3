@@ -9,11 +9,6 @@ variable "alarms" {
   default = null
 }
 
-variable "bucket_name" {
-  description = "specify the name of s3 bucket for cloudfront"
-  type = string
-}
-
 variable "stack_name" {
   description = "name of the project"
   type = string
