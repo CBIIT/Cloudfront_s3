@@ -65,9 +65,3 @@ variable "s3_force_destroy" {
   default = true
   type = bool
 }
-
-variable "project" {
-  type = string
-  description = "name of project"
-  default = ""
-}
