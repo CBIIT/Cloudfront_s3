@@ -1,6 +1,6 @@
 module "cloudfront" {
   count = var.create_cloudfront ? 1 : 0
-  source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/cloudfront?ref=cloudfront"
+  source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/cloudfront?ref=cloudfront_icdc"
   resource_prefix     = "${var.stack_name}-${terraform.workspace}"
   alarms = var.alarms
   domain_name = var.domain_name
