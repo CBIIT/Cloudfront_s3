@@ -1,5 +1,5 @@
 module "s3" {
-  source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/s3?ref=lifecycle_s3"
+  source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/s3?ref=cloudfront_icdc"
   #resource_prefix     = "${var.stack_name}-${terraform.workspace}"
   bucket_name = var.bucket_name
   stack_name = var.stack_name
