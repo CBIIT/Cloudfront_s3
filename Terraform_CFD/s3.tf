@@ -1,4 +1,5 @@
 module "s3" {
+  count = var.create_bucket_acl ? 1: 0
   source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/s3?ref=lifecycle_s3"
   #resource_prefix     = "${var.stack_name}-${terraform.workspace}"
   bucket_name = var.bucket_name
