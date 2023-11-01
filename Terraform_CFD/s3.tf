@@ -1,6 +1,6 @@
 module "s3" {
   source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/s3"
-  #resource_prefix     = "${var.stack_name}-${terraform.workspace}"
+  resource_prefix     = "${var.stack_name}-${terraform.workspace}"
   acl    = "private"
   bucket_name = var.bucket_name
   stack_name = var.stack_name
