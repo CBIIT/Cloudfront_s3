@@ -1,10 +1,10 @@
 module "s3" {
   source = "git::https://github.com/CBIIT/datacommons-devops.git//terraform/modules/s3"
   resource_prefix     = "${var.stack_name}-${terraform.workspace}"
-  acl    = "private"
+  #acl    = "private"
   bucket_name = var.bucket_name
   stack_name = var.stack_name
-  create_bucket_acl = var.create_bucket_acl
+  #create_bucket_acl = var.create_bucket_acl
   env = terraform.workspace
   tags = var.tags
   s3_force_destroy = var.s3_force_destroy
